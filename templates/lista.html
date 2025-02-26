@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de Alunos</title>
+        <style type="text/css">
+
+          body{
+            text-align: center;
+            background-color: rgb(122, 203, 235);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          }
+
+          h2{
+            color: #fff;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          }
+        table, tr, td{
+            border: 3px solid #5F9EA0;
+            background-color: #fff;
+            border-radius: 3px;
+            padding: 5px;
+            margin: auto;
+        }
+
+        button{
+            margin-top: 10px;
+            width: 3%;
+            cursor: pointer;
+        }
+
+
+               
+        </style>
+    </head>
+
+    <!--Body é o corpo da página-->
+    <body>
+        <!--Integração-->
+       <h2>Lista de alunos - {{ titulo }}</h2>
+
+       <div class="content">
+       <table>
+        <thead>
+            <tr>
+                <!--Células da tabela-->
+                <th>RA</th><th>Nome</th><th>Idade</th><th>E-mail</th>
+            </tr>
+        </thead>
+
+            <tbody>
+                <tr>
+                     <td>2022</td><td>Kaio Olinda</td>
+                    <td>20</td> <td>kaio@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>2025</td> <td>Artur Matos</td>
+                    <td>19</td> <td>artur@hotmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>2029</td> <td>Matias Jeremias</td>
+                    <td>21</td> <td>paulahellen@gmail.com</td>
+                </tr>
+            </tbody>
+
+        
+       </table>
+    
+       <button onclick="clicar()">Enviar</button>
+
+    </body>
+
+</html>
