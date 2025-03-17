@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de Alunos</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <style type="text/css">
+
+          body{
+            text-align: center;
+            background-color: rgb(122, 203, 235);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          }
+    
+          h2{
+            color: #fff;
+            /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+            font-family: 'VT323', sans-serif;
+          }
+          h2:hover{
+            color: rgba(59, 59, 99, 0.952);
+          }
+
+        table, tr, td{
+            border: 3px solid #5F9EA0;
+            background-color: #fff;
+            border-radius: 3px;
+            padding: 5px;
+            margin: auto;
+            padding: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        button{
+            margin-top: 10px;
+            width: 5%;
+            cursor: pointer;
+            border: none;
+        }
+
+
+               
+        </style>
+    </head>
+
+    <!--Body é o corpo da página-->
+    <body>
+        <!--Integração-->
+       <h2>Lista de alunos - {{ titulo }}</h2>
+
+       <div class="content">
+       <table>
+        <thead>
+            <tr>
+                <!--Células da tabela-->
+                <th>RA</th><th>Nome</th><th>Idade</th><th>E-mail</th>
+            </tr>
+        </thead>
+
+            <tbody>
+                <!--apontando -->
+                {% for aluno in alunos%}
+                <tr>
+                    <td> {{aluno.ra_aluno}} </td>
+                    <td> {{aluno.nome_aluno}} </td>
+                    <td> {{aluno.idade_aluno}} </td>
+                    <td> {{aluno.email_aluno}} </td>
+                </tr>
+                {% endfor %}
+
+    
+            </tbody>
+
+        
+       </table>
+    
+       <button>Enviar</button>
+
+    </body>
+
+</html>
