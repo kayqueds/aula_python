@@ -1,0 +1,66 @@
+body{
+    font: normal 18px "Arial", sans-serif;
+    background-image: linear-gradient(to left, #F2E2B1, #D5C7A3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1, h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(153, 45, 12);
+    text-align: center;
+}
+
+label{
+    margin-bottom: 5px;
+
+}
+input{
+    width: 85%;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+input:focus{
+    outline: 1px solid gray;
+}
+form{
+    padding: 25px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #C599B6;
+    border-radius: 5px;
+
+}
+button{
+    background-color: gray;
+    color: #ffff;
+    padding: 5px;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 2px;
+    width: 40%;
+    border-radius: 5px 5px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(31, 29, 29);
+    scale: 1.1;
+}
+
+/*tabela da lista*/
+table, tr, th ,td{
+    border: 1px solid rgb(153, 45, 12);
+    background-color: beige;
+    padding: 10px;
+}
+table{
+    border-radius: 5px 8px;
+}

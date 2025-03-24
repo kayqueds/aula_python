@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar novo aluno</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='estilo.css')}}">
+</head>
+<body>
+
+    <form method="post" action="/add_aluno">
+        <h1>Cadastro de aluno</h1>
+        <label>Nome:</label>
+        <input required type="text" placeholder="Digite o seu nome" name="txtNome">
+
+        <label>Idade:</label>
+        <input required type="text" placeholder="Digite a sua idade" name="txtIdade">
+
+        <label>E-mail:</label>
+        <input required type="text" placeholder="Digite o seu email" name="txtEmail">
+
+        <label>RA:</label>
+        <input required type="text" placeholder="Digite o seu RA" name="txtRA">
+
+        <button type="submit">Cadastrar Aluno</button>
+        
+    </form>
+    
+</body>
+</html>
