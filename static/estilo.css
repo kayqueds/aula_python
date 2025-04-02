@@ -55,6 +55,13 @@ button:hover{
     scale: 1.1;
 }
 
+.flow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 /*tabela da lista*/
 table, tr, th ,td{
     border: 1px solid rgb(153, 45, 12);
@@ -63,4 +70,5 @@ table, tr, th ,td{
 }
 table{
     border-radius: 5px 8px;
+    max-width: 70%;
 }

@@ -1,9 +1,15 @@
 # pip install flask bilbioteca
 
-# importa biblioteca
+# importa biblioteca para trabalhar
+# com banco de dados
+# obs: instalar o connector e sql alchemy
+# pip install flask_sqlalchemy
 from flask import  Flask, render_template, request, redirect
 
 # a linha baixo cria uma calsse
+
+# a linha importa a bilblioteca para trabalhar
+# com banco de dados
 class Aluno:
     def __init__(self, ra, nome, idade, email):
         self.ra_aluno = ra
@@ -32,7 +38,6 @@ def home():
     return render_template('home.html')
 
 
-
 @app.route("/lista")
 def lista_alunos():
 
@@ -47,6 +52,8 @@ def cadastrar_aluno():
     return render_template('cadastrar.html')
 # a rota/função abaixo, cadastra o aluno  na lista
 # e posteriormente no banco de dados
+
+# from flask_sqlalchemy import import SQLalchemy
 
 @app.route('/add_aluno', methods=['POST',])
 def adicionar_aluno():
@@ -69,3 +76,8 @@ def adicionar_aluno():
 app.run(debug=True)
 
 
+
+
+
+# usuario banco: root
+# senha do banco da Fecaf: toor

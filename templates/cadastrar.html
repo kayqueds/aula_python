@@ -22,9 +22,11 @@
         <label>RA:</label>
         <input required type="text" placeholder="Digite o seu RA" name="txtRA">
 
-        <button type="submit">Cadastrar Aluno</button>
+        <button onclick="enviar()" type="submit">Cadastrar Aluno</button>
         
     </form>
     
+    <!--Adicionando o o Javascript-->
+    <script src="{{url_for('static', filename= 'script.js')}}"></script>
 </body>
 </html>
