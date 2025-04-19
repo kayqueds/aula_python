@@ -4,29 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar novo aluno</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='estilo.css')}}">
+   <!--<link rel="stylesheet" href="{{url_for('static', filename='estilo.css')}}">-->
+    <link rel="stylesheet" href="../static/bootstrap.css">                 
 </head>
 <body>
 
+
+    <ul class="nav justify-content-end">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('home')}}">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('cadastrar_aluno')}}">Cadastrar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+
+
+
+
+    <div class="container">
     <form method="post" action="/add_aluno">
-        <h1>Cadastro de aluno</h1>
-        <label>Nome:</label>
-        <input required type="text" placeholder="Digite o seu nome" name="txtNome">
+    <div class="mb-3">
+            <label class="form-label">Nome:</label>
+            <input class="form-control" required type="text" placeholder="Ex: Kayque Estevão" name="txtNome">
+        </div>   
 
-        <label>Idade:</label>
-        <input required type="text" placeholder="Digite a sua idade" name="txtIdade">
+        <div class="mb-3">
+            <label class="form-label">Idade:</label>
+            <input class="form-control" required type="text" placeholder="Ex: 23" name="txtIdade">
+         </div>
 
-        <label>E-mail:</label>
-        <input required type="text" placeholder="Digite o seu email" name="txtEmail">
-
-        <label>RA:</label>
-        <input required type="text" placeholder="Digite o seu RA" name="txtRA">
-
-        <button onclick="enviar()" type="submit">Cadastrar Aluno</button>
+        <div class="mb-3">
+            <label class="form-label">E-mail:</label>
+            <input class="form-control" required type="text" placeholder="nome@provedor.com.br" name="txtEmail">
+        </div>
+        
+        
+    
+            <button class="btn btn-primary" onclick="enviar()" type="submit">Cadastrar Aluno</button>
+ 
         
     </form>
-    
+</div>
     <!--Adicionando o o Javascript-->
     <script src="{{url_for('static', filename= 'script.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
