@@ -21,7 +21,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = \
     '{SGDB}://{usuario}:{senha}@{servidor}/{database}'.format(
         SGDB = 'mysql+mysqlconnector',
         usuario = 'root',
+<<<<<<< HEAD
         senha = 'toor',
+=======
+        senha = '',
+>>>>>>> 9690b916e191d8190d10cb9f3aa81ad11263a738
         servidor = 'localhost',
         database = 'prj_cadastro'
     )
@@ -63,7 +67,7 @@ def lista_alunos():
 # a partir daqui eu trabalho com a tela cadastrar.html
 @app.route('/cadastro')
 def cadastrar_aluno():
-    return render_template('cadastrar.html')
+    return render_template('cadastrar.html', cache_timeout=0)
 # a rota/função abaixo, cadastra o aluno  na lista
 # e posteriormente no banco de dados
 
