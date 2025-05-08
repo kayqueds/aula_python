@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar novo aluno</title>
+    <title>Editar aluno</title>
    <!--<link rel="stylesheet" href="{{url_for('static', filename='estilo.css')}}">-->
     <link rel="stylesheet" href="../static/bootstrap.css">                 
 </head>
@@ -27,25 +27,31 @@
 
 
     <div class="container">
-    <form method="post" action="/add_aluno">
+    <form method="post" action="/atualiza">
+
+      <!-- a linha abaixo cria um objeto oculto na página-->
+       <input type="hidden" name="txtRA" value="{{aluno.ra_aluno}}">
+
+
+
     <div class="mb-3">
             <label class="form-label">Nome:</label>
-            <input class="form-control" required type="text" placeholder="Ex: Kayque Estevão" name="txtNome">
+            <input class="form-control" required type="text" name="txtNome" value="{{aluno.nome_aluno}}">
         </div>   
 
         <div class="mb-3">
             <label class="form-label">Idade:</label>
-            <input class="form-control" required type="text" placeholder="Ex: 23" name="txtIdade">
+            <input class="form-control" required type="text" name="txtIdade" value="{{aluno.idade_aluno}}">
          </div>
 
         <div class="mb-3">
             <label class="form-label">E-mail:</label>
-            <input class="form-control" required type="text" placeholder="nome@provedor.com.br" name="txtEmail">
+            <input class="form-control" required type="text" name="txtEmail" value="{{aluno.email_aluno}}">
         </div>
         
         
     
-            <button class="btn btn-primary" onclick="enviar()" type="submit">Cadastrar Aluno</button>
+            <button class="btn btn-primary" onclick="enviar()" type="submit">Atualizar</button>
  
         
     </form>
