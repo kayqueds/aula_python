@@ -6,7 +6,10 @@
     <title>Lista de Alunos </title>
     <link href="../static/bootstrap.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="{{url_for('static', filename='estilo.css')}}"> -->
+<<<<<<< HEAD
     
+=======
+>>>>>>> e0ab082d99397955ad1728d9802f4792596c4ad0
 </head>
 <body>
 
@@ -19,7 +22,11 @@
           <a class="nav-link" href="{{url_for('cadastrar_aluno')}}">Cadastrar</a>
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
           <a class="nav-link" href="/sair">Sair</a>
+=======
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+>>>>>>> e0ab082d99397955ad1728d9802f4792596c4ad0
         </li>
       </ul>
 
@@ -52,9 +59,14 @@
 
                 
                 <td>
+<<<<<<< HEAD
                     
                     <a class="btn btn-primary btn-success" title="Editar aluno" href="{{ url_for('editar_aluno', ra=aluno.ra_aluno) }}">Editar</a>
                     <a class="btn btn-primary btn-danger" title="Apagar aluno" href="{{url_for('excluir_aluno', ra=aluno.ra_aluno)}}">Excluir</a>
+=======
+                    <a>Editar</a>
+                    <a>Excluir</a>
+>>>>>>> e0ab082d99397955ad1728d9802f4792596c4ad0
                 </td>
             </tr>
             {% endfor %}

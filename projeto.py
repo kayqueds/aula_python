@@ -4,9 +4,14 @@
 # com banco de dados
 # obs: instalar o connector e sql alchemy
 # pip install flask_sqlalchemy
+<<<<<<< HEAD
 from flask import  Flask, render_template, request, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 
+=======
+from flask import  Flask, render_template, request, redirect
+from flask_sqlalchemy import SQLAlchemy
+>>>>>>> e0ab082d99397955ad1728d9802f4792596c4ad0
 # a linha baixo cria uma calsse
 
 # a linha importa a bilblioteca para trabalhar
@@ -16,15 +21,26 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask (__name__)
 
+<<<<<<< HEAD
 app.secret_key = 'projetoflask'
 
+=======
+>>>>>>> e0ab082d99397955ad1728d9802f4792596c4ad0
 # CRIANDO UMA BIBLIOTECA PARA O BANCO DE DADOS
 # configuração para conectar banco de dados
 app.config['SQLALCHEMY_DATABASE_URI'] = \
     '{SGDB}://{usuario}:{senha}@{servidor}/{database}'.format(
         SGDB = 'mysql+mysqlconnector',
         usuario = 'root',
+<<<<<<< HEAD
         senha = 'toor',
+=======
+<<<<<<< HEAD
+        senha = 'toor',
+=======
+        senha = '',
+>>>>>>> 9690b916e191d8190d10cb9f3aa81ad11263a738
+>>>>>>> e0ab082d99397955ad1728d9802f4792596c4ad0
         servidor = 'localhost',
         database = 'prj_cadastro'
     )
@@ -57,10 +73,13 @@ def home():
 @app.route("/lista")
 def lista_alunos():
 
+<<<<<<< HEAD
     if session['usuario_logado'] == None or 'usuario_logado' not in session:
         return redirect('/login')
 
 
+=======
+>>>>>>> e0ab082d99397955ad1728d9802f4792596c4ad0
     # alista de alunos vai receber um select (query)
     lista_alunos_cadastrados = Aluno.query.order_by(Aluno.ra_aluno)
 
@@ -68,6 +87,7 @@ def lista_alunos():
                            alunos = lista_alunos_cadastrados)
 
 # a partir daqui eu trabalho com a tela cadastrar.html
+<<<<<<< HEAD
 
 
 @app.route('/cadastrar')
@@ -78,6 +98,11 @@ def cadastrar_aluno():
         return redirect('/login')
 
     return render_template('cadastrar.html')
+=======
+@app.route('/cadastro')
+def cadastrar_aluno():
+    return render_template('cadastrar.html', cache_timeout=0)
+>>>>>>> e0ab082d99397955ad1728d9802f4792596c4ad0
 # a rota/função abaixo, cadastra o aluno  na lista
 # e posteriormente no banco de dados
 
@@ -104,7 +129,11 @@ def adicionar_aluno():
     # a linha abaixo grafa as informações no banco
     db.session.commit()
 
+<<<<<<< HEAD
 # aqui começa a parte de atualizar o cadastro
+=======
+
+>>>>>>> e0ab082d99397955ad1728d9802f4792596c4ad0
 
     return redirect('/lista')
 
